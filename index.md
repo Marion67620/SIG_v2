@@ -2,6 +2,8 @@
 ## BLONDEAU Marion
 ### Groupe de 18h-20h
 
+<a href=”https://marion67620.github.io/SIG_v2/intro_droit_urba”>Fichier_html</a> 
+
 You can use the [editor on GitHub](https://github.com/Marion67620/SIG_v2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
