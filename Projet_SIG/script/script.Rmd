@@ -1,0 +1,63 @@
+---
+title: "script 1"
+author: "nom"
+date: "24/03/2022"
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+```{r}
+library(sf)
+setwd("C:/Users/Marion/Documents/05. L3/SIG/Projet_SIG/data")
+data <- read.csv("bondyInsee.csv", fileEncoding = "UTF-8")
+str(data)
+```
+
+Je joue la librairie sf, puis je lis le fichier bondyInsee.csv, avec la ligne de code pour que les accents puissent être lus. Je nomme ce fichier "data". Ensuite, je regarde sa structure.
+
+
+```{r}
+summary(data$Men_pauv)
+hist(data$Men_pauv, breaks = c(0,5,10,20,40,200,300))
+```  
+
+Avec ces commandes, je fais un historiogramme avec la valeur "Men_pauv", avec des intervalles données.  
+
+```{r}
+summary(data$Men_prop)
+hist(data$Men_prop, breaks = c(0,5,10,20,40,200,300))
+```
+
+Ici je fais la même chose, en prenant la valeur "Men_prop".
+```{r}
+png(height = 800, width = 600, filename = "Men_prop.png")
+hist(data$Men_prop, breaks = c(0,5,10,20,40,200,300))
+dev.off()
+```
+
+Ces lignes me permettent d'extraire l'historiogramme en fichier .png. Je l'ai ensuite déplacée pour le mettre dans le dossier img du projet "Projet_SIG". 
+
+```{r}
+str(data)
+```
+Je regarde à nouveau la structure du fichier data pour pouvoir voir quel autre historiogramme faire. 
+
+```{r}
+png(height = 800, width = 600, filename = "Men_mais.png")
+hist(data$Men_mais, breaks = c(0,5,10,20,40,200,300))
+dev.off()
+```
+
+Je crée un autre historiogramme avec une autre variable.
